@@ -1,5 +1,5 @@
 {
-    "name": "draw/core",
+    "name": "codraw/core",
     "description": "Core library for draw component and bundle.",
     "license": "MIT",
     "type": "library",
@@ -26,5 +26,8 @@
         "branch-alias": {
             "dev-master": "0.38-dev"
         }
+    },
+    "replace": {
+        "draw/core": "self.version"
     }
 }
