@@ -27,14 +27,14 @@ class DataAccessor
 
     final public function __construct(
         /**
-         * The root data that the asserts will be done on.
+         * The root data that the accessor will operate on.
          */
         private mixed $data,
     ) {
     }
 
     /**
-     * Return the data value of what is currently tested.
+     * Return the current data, or the value at the given path.
      *
      * @param $path null|string|PropertyPathInterface
      */
@@ -44,7 +44,7 @@ class DataAccessor
     }
 
     /**
-     * Transform the data and return a new instance of Tester with the transformed data.
+     * Transform the data and return a new instance with the transformed data.
      *
      * @param callable $callable The callable that will transform the data
      *
@@ -56,7 +56,7 @@ class DataAccessor
     }
 
     /**
-     * Return a new Tester instance with the path value as data.
+     * Return a new instance with the path value as data.
      *
      * @param string|PropertyPathInterface $path
      *

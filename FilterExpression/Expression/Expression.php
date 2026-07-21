@@ -2,6 +2,7 @@
 
 namespace Draw\Component\Core\FilterExpression\Expression;
 
+use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\EqualTo;
 
 abstract class Expression
@@ -17,9 +18,10 @@ abstract class Expression
     }
 
     /**
-     * @param string[]|null $groups
+     * @param Constraint|Constraint[]|null $constraints
+     * @param string[]|null                $groups
      */
-    public static function validate(string $path, ?EqualTo $constraints = null, ?array $groups = null): ConstraintExpression
+    public static function validate(string $path, Constraint|array|null $constraints = null, ?array $groups = null): ConstraintExpression
     {
         return new ConstraintExpression($path, $constraints, $groups);
     }

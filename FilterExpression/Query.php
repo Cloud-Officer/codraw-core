@@ -37,7 +37,7 @@ class Query
         return $this;
     }
 
-    public function getExpression(): Expression
+    public function getExpression(): ?Expression
     {
         return $this->expression;
     }

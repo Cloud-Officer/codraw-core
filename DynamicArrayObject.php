@@ -6,11 +6,11 @@ class DynamicArrayObject extends \ArrayObject
 {
     final public function __construct($input, $flags = 0, $iterator_class = 'ArrayIterator')
     {
-        parent::__construct($input, $flags, $iterator_class);
-
         if (null === $input) {
-            return;
+            $input = [];
         }
+
+        parent::__construct($input, $flags, $iterator_class);
 
         foreach ($input as $key => $value) {
             if (\is_array($value) || \is_object($value)) {

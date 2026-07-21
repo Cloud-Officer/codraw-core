@@ -28,7 +28,7 @@ class Evaluator
     {
         $expression = $query->getExpression();
         foreach ($data as $row) {
-            if ($this->evaluate($row, $expression)) {
+            if (null === $expression || $this->evaluate($row, $expression)) {
                 yield $row;
             }
         }
