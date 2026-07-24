@@ -34,7 +34,7 @@ class CompositeExpressionEvaluatorTest extends TestCase
         );
 
         $evaluator
-            ->expects(static::never())
+            ->expects($this->never())
             ->method('evaluate')
         ;
 
@@ -55,7 +55,7 @@ class CompositeExpressionEvaluatorTest extends TestCase
         $this->expectExceptionMessage('Unsupported CompositeExpression type ['.$type.']');
 
         $evaluator
-            ->expects(static::never())
+            ->expects($this->never())
             ->method('evaluate')
         ;
 
