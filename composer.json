@@ -28,6 +28,6 @@
         }
     },
     "replace": {
-        "codraw/core": "self.version"
+        "draw/core": "self.version"
     }
 }
